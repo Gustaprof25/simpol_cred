@@ -87,31 +87,37 @@
 }
 
 .hero-circle{
-    width:500px;
-    height:500px;
-    background:#0ba4d8;
+    width:600px;
+    height:600px;
+    background:linear-gradient(
+        135deg,
+        #18B5E5 0%,
+        #005679 100%
+    );
     border-radius:50%;
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
 
-.hero-image{
-    position:relative;
-    text-align:center;
+    top:50%;
+    left:55%;
+
+    opacity:0;
+
+    transform:translate(-50%, -50%) scale(.3);
+
+    animation:circleIn 1s ease forwards;
 }
 
 .hero-image img{
     position:relative;
     z-index:2;
-    max-width:800px;
+    max-width:900px;
+    width:100%;
 }
 
 .floating-card{
     position:absolute;
-    bottom:60px;
-    left:0;
+    bottom:100px;
+    left:-20px;
     background:white;
     color:#333;
     border-radius:20px;
@@ -125,8 +131,8 @@
 
 .parcelamento{
     position:absolute;
-    top:80px;
-    right:0;
+    top:120px;
+    right:-20px;
     background:#F04E4E;
     color:white;
     padding:18px;
@@ -161,4 +167,232 @@
     font-size:24px;
     font-weight:700;
     margin-bottom:20px;
+}
+
+.hero-image{
+    position:relative;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* Pessoa vem da direita */
+
+.animate-person{
+    opacity:0;
+    transform:translateX(150px);
+    animation:personIn 1s ease forwards;
+    animation-delay:.4s;
+}
+
+/* Card inferior vem da esquerda */
+
+.animate-card-left{
+    opacity:0;
+    transform:translateX(-150px);
+    animation:leftCardIn .8s ease forwards;
+    animation-delay:1s;
+}
+
+/* Card superior vem da direita */
+
+.animate-card-right{
+    opacity:0;
+    transform:translateX(150px);
+    animation:rightCardIn .8s ease forwards;
+    animation-delay:1.2s;
+}
+
+@keyframes circleIn{
+
+    from{
+        opacity:0;
+        transform:translate(-50%, -50%) scale(.3);
+    }
+
+    to{
+        opacity:1;
+        transform:translate(-50%, -50%) scale(1);
+    }
+
+}
+
+@keyframes personIn{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes leftCardIn{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes rightCardIn{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 992px){
+
+    .hero{
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-benefits{
+        justify-content:center;
+    }
+
+    .hero-image{
+        min-height:500px;
+        margin-top:40px;
+    }
+
+    .hero-image img{
+        max-width:500px;
+        transform:none;
+    }
+
+    .hero-circle{
+        width:450px;
+        height:450px;
+        left:50%;
+    }
+
+}
+
+/* ==========================
+   CELULARES
+========================== */
+
+@media (max-width: 768px){
+
+    .hero{
+        padding-top:110px;
+        padding-bottom:50px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:1rem;
+        margin-bottom:25px;
+    }
+
+    .hero-badge{
+        font-size:.85rem;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        width:100%;
+    }
+
+    .btn-primary-custom,
+    .btn-outline-custom{
+        width:100%;
+        margin:0;
+    }
+
+    .hero-benefits{
+        justify-content:center;
+        gap:15px;
+        font-size:.9rem;
+    }
+
+    .hero-image{
+        min-height:380px;
+        margin-top:30px;
+    }
+
+    .hero-circle{
+        width:300px;
+        height:300px;
+        left:50%;
+        top:50%;
+    }
+
+    .hero-image img{
+        max-width:320px;
+        width:100%;
+        transform:none;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .floating-card{
+        left:10px;
+        bottom:20px;
+
+        padding:10px 15px;
+
+        font-size:.8rem;
+
+        max-width:170px;
+    }
+
+    .parcelamento{
+        right:10px;
+        top:20px;
+
+        padding:10px 15px;
+
+        font-size:.8rem;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:1.8rem;
+    }
+
+    .hero-circle{
+        width:250px;
+        height:250px;
+    }
+
+    .hero-image img{
+        max-width:260px;
+    }
+
+    .floating-card{
+        max-width:140px;
+        font-size:.75rem;
+    }
+
+    .parcelamento{
+        font-size:.75rem;
+    }
+
 }
