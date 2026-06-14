@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/logo_transparente.png">
 </head>
 
 <body>
@@ -35,23 +36,28 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#cartao">
+                        <a class="nav-link" href="#simulador-cartao">
                             Cartão de Crédito
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#fgts">
+                        <a class="nav-link" href="#contato">
                             FGTS
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#consignado">
+                        <a class="nav-link" href="#contato">
                             Consignado
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#localizacao">
+                            Como chegar
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">
                             Sobre Nós
@@ -60,8 +66,9 @@
 
                 </ul>
 
-                <a href="https://wa.me/5563999999999" class="btn btn-simulacao">
-                    Fazer Simulação
+                <a href="#contato" class="btn btn-simulacao">
+                    <i class="fab fa-whatsapp"></i>
+                    Solicitar Simulação
                 </a>
 
             </div>
@@ -93,11 +100,11 @@
 
                     <div class="hero-buttons">
 
-                        <a href="#" class="btn btn-primary-custom">
+                        <a href="#simulador-cartao" class="btn btn-primary-custom">
                             Fazer Simulação
                         </a>
 
-                        <a href="#" class="btn btn-outline-custom">
+                        <a href="#contato" class="btn btn-outline-custom">
                             Como Funciona
                         </a>
 
@@ -126,11 +133,12 @@
 
                 <div class="col-lg-6">
 
-                    <div class="hero-image">
+                    <div class="hero-image-main">
 
                         <div class="hero-circle animate-circle"></div>
 
-                        <img src="assets/img/cliente_feliz.png" alt="Cliente Simpol Cred" class="animate-person">
+                        <img src="assets/img/cliente_feliz.png" alt="Cliente Simpol Cred"
+                            class="hero-person animate-person">
 
                         <div class="floating-card animate-card-left">
 
@@ -195,7 +203,172 @@
         </div>
 
     </section>
+    <section class="hero-slider">
 
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+
+                    <div class="hero-slide">
+
+                        <div class="container">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-6">
+
+                                    <span class="hero-tag">
+                                        Crédito Rápido
+                                    </span>
+
+                                    <h1>
+                                        Transforme o limite do seu cartão em dinheiro na hora.
+                                    </h1>
+
+                                    <p>
+                                        Receba dinheiro rápido, sem burocracia e com parcelas que cabem no seu bolso.
+                                    </p>
+
+                                    <a href="#simulador-cartao" class="btn btn-simulacao-banner">
+                                        Fazer Simulação
+                                    </a>
+
+                                </div>
+
+                                <div class="col-lg-6">
+
+                                    <div class="hero-image">
+
+                                        <img src="assets/img/banner-1.png" class="img-fluid" alt="Cartão de Crédito">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+
+                    <div class="hero-slide">
+
+                        <div class="container">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-6">
+
+                                    <span class="hero-tag hero-tag-green">
+                                        FGTS
+                                    </span>
+
+                                    <h1>
+                                        Antecipe seu FGTS e receba o dinheiro agora.
+                                    </h1>
+
+                                    <p>
+                                        Sem esperar o saque aniversário. Dinheiro liberado rapidamente.
+                                    </p>
+
+                                    <a href="#contato" class="btn btn-simulacao-banner">
+                                        Antecipar Agora
+                                    </a>
+
+                                </div>
+
+                                <div class="col-lg-6">
+
+                                    <div class="hero-image">
+
+                                        <img src="assets/img/banner-2.png" class="img-fluid" alt="FGTS">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+
+                    <div class="hero-slide">
+
+                        <div class="container">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-6">
+
+                                    <span class="hero-tag">
+                                        Consignado
+                                    </span>
+
+                                    <h1>
+                                        Crédito consignado com as melhores taxas.
+                                    </h1>
+
+                                    <p>
+                                        Atendimento especializado para aposentados, pensionistas e servidores.
+                                    </p>
+
+                                    <a href="#contato" class="btn btn-simulacao-banner">
+                                        Solicitar Proposta
+                                    </a>
+
+                                </div>
+
+                                <div class="col-lg-6">
+
+                                    <div class="hero-image">
+
+                                        <img src="assets/img/banner-3.png" class="img-fluid" alt="Consignado">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Controles -->
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </section>
     <!-- SERVIÇOS -->
     <section id="servicos" class="py-5">
 
@@ -326,6 +499,184 @@
         </div>
 
     </section>
+
+    <section id="simulador-cartao" class="simulador-section">
+
+        <div class="container">
+
+            <div class="simulador-card">
+
+                <div class="simulador-header">
+
+                    <span class="simulador-badge">
+                        💳 Simulador de Crédito
+                    </span>
+
+                    <h2>
+                        Descubra o limite necessário no seu cartão
+                    </h2>
+
+                    <p>
+                        Informe seus dados e simule gratuitamente.
+                    </p>
+
+                </div>
+                <div class="modo-simulador">
+
+                    <button type="button" class="modo-btn active" data-modo="receber">
+
+                        Quero Receber
+
+                    </button>
+
+                    <button type="button" class="modo-btn" data-modo="limite">
+
+                        Limite Disponível
+
+                    </button>
+
+                </div>
+                <form id="simuladorForm">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Nome Completo
+                            </label>
+
+                            <input type="text" class="form-control form-control-lg" id="nome"
+                                placeholder="Digite seu nome" required>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                CPF
+                            </label>
+
+                            <input type="text" class="form-control form-control-lg" id="cpf"
+                                placeholder="000.000.000-00" required>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Telefone
+                            </label>
+
+                            <input type="tel" class="form-control form-control-lg" id="telefone"
+                                placeholder="(63) 99999-9999" required>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Cidade
+                            </label>
+
+                            <select id="cidade" class="form-select form-select-lg" required>
+
+                                <option value="">
+                                    Selecione sua cidade
+                                </option>
+
+                                <option value="palmas">
+                                    Palmas
+                                </option>
+
+                                <option value="araguaina">
+                                    Araguaína
+                                </option>
+
+                                <option value="gurupi">
+                                    Gurupi
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label" id="labelValor">
+
+                                Quanto deseja receber?
+
+                            </label>
+
+                            <input type="number" class="form-control form-control-lg" id="valorPrincipal"
+                                placeholder="Ex: R$2000" required>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Número de Parcelas
+                            </label>
+
+                            <select id="parcelas" class="form-select form-select-lg" required>
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="3">3x</option>
+                                <option value="6">6x</option>
+                                <option value="9">9x</option>
+                                <option value="12">12x</option>
+                                <option value="15">15x</option>
+                                <option value="18">18x</option>
+                                <option value="21">21x</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <button type="button" id="btnCalcular" class="btn btn-danger btn-lg w-100 mt-4">
+
+                        Calcular Agora
+
+                    </button>
+
+                </form>
+
+                <div id="resultadoSimulacao" class="resultado-simulacao mt-4" style="display:none;">
+
+                    <h3>
+                        Resultado da Simulação
+                    </h3>
+
+                    <div class="valor-resultado">
+
+                        R$ 0,00
+
+                    </div>
+
+                    <p>
+                        Este é o limite aproximado que você precisa ter disponível no cartão.
+                    </p>
+
+                    <a href="https://wa.me/5563992093340" target="_blank" class="btn btn-success btn-lg">
+
+                        Receber Atendimento no WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
     <!-- CTA -->
     <section class="cta-section">
 
@@ -346,62 +697,165 @@
 
         <div class="container">
 
-            <div class="text-center mb-5">
-                <h2>Solicite sua Simulação</h2>
-                <p>Escolha sua cidade e fale com um especialista.</p>
+            <div class="simulacao-card">
+
+                <div class="form-header">
+                    <span>💰 Simulação Gratuita</span>
+                    <h2>Solicite sua Proposta</h2>
+                    <p>Preencha os dados abaixo e fale com um especialista.</p>
+                </div>
+
+                <form id="leadForm">
+
+                    <div class="input-group-custom">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="telefone" placeholder="Seu telefone" required>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        <select id="cidade" required>
+                            <option value="">
+                                Selecione sua cidade
+                            </option>
+
+                            <option value="palmas">Palmas</option>
+                            <option value="araguaina">Araguaína</option>
+                            <option value="gurupi">Gurupi</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <i class="fas fa-briefcase"></i>
+
+                        <select id="servico" required>
+                            <option value="">
+                                Selecione o serviço desejado
+                            </option>
+
+                            <option value="cartao">
+                                Crédito no Cartão
+                            </option>
+
+                            <option value="fgts">
+                                Antecipação FGTS
+                            </option>
+
+                            <option value="consignado">
+                                Empréstimo Consignado
+                            </option>
+
+                            <option value="portabilidade">
+                                Portabilidade
+                            </option>
+
+                            <option value="refinanciamento">
+                                Refinanciamento
+                            </option>
+
+                            <option value="financiamento">
+                                Financiamento
+                            </option>
+
+                            <option value="seguro">
+                                Seguros
+                            </option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Quero Minha Simulação
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
             </div>
 
-            <div class="row justify-content-center">
 
-                <div class="col-lg-6">
+        </div>
 
-                    <div class="card shadow border-0 p-4">
+    </section>
 
-                        <form id="leadForm">
 
-                            <div class="mb-3">
-                                <label class="form-label">Nome Completo</label>
-                                <input type="text" id="nome" class="form-control" required>
+
+    </main>
+    <section id="localizacao" class="localizacao-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+
+                    <span class="section-badge">
+                        📍 Nossa Localização
+                    </span>
+
+                    <h2>
+                        Venha tomar um café com a gente
+                    </h2>
+
+                    <p>
+                        Nossa equipe está pronta para atender você presencialmente e encontrar a melhor solução
+                        financeira para sua necessidade.
+                    </p>
+
+                    <div class="info-localizacao">
+
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Simpol Cred</strong>
+                                <span>Palmas - TO</span>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Telefone</label>
-                                <input type="tel" id="telefone" class="form-control" required>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Atendimento</strong>
+                                <span>Segunda à Sexta das 08:00h–17:00h</span>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Cidade</label>
-
-                                <select id="cidade" class="form-select" required>
-
-                                    <option value="">
-                                        Selecione sua cidade
-                                    </option>
-
-                                    <option value="palmas">
-                                        Palmas
-                                    </option>
-
-                                    <option value="araguaina">
-                                        Araguaína
-                                    </option>
-
-                                    <option value="gurupi">
-                                        Gurupi
-                                    </option>
-
-                                </select>
-
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Contato</strong>
+                                <span>(63) 99209-3340</span>
                             </div>
+                        </div>
 
-                            <button type="submit" class="btn btn-danger w-100">
+                    </div>
 
-                                Falar com Especialista
+                    <a href="https://maps.google.com/maps?vet=10CAAQoqAOahcKEwigsKzUxYeVAxUAAAAAHQAAAAAQCQ..i&rlz=1C1HKFL_pt-PTBR1206BR1206&sca_esv=314a6503d1380aa3&pvq=CgwvZy8xMXh0d2p0NHkiEQoLc2ltcG9sIGNyZWQQAhgD&lqi=CgtzaW1wb2wgY3JlZEidyeGd84GAgAhaFRAAEAEYABgBIgtzaW1wb2wgY3JlZJIBC2xvYW5fYWdlbmN5&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=br&sa=X&ftid=0x9324cb61a54ca145:0x60f64bbecd7de9cb"
+                        target="_blank" class="btn-rota">
 
-                            </button>
+                        <i class="fas fa-route"></i>
+                        Como Chegar
 
-                        </form>
+                    </a>
 
+                </div>
+
+                <div class="col-lg-7">
+
+                    <div class="mapa-wrapper">
+
+                        <iframe src="https://www.google.com/maps?q=Simpol%20Cred%20Palmas%20TO&output=embed"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+                    <div class="map-badge">
+                        ⭐ Mais de 1.000 clientes atendidos
                     </div>
 
                 </div>
@@ -412,25 +866,243 @@
 
     </section>
 
+    <section id="sobre" class="sobre-section">
 
+        <div class="container">
 
-    </main>
+            <div class="row align-items-center g-5">
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <div>
-                <strong>Simpol Cred</strong><br>
-                <small>© 2026 Simpol Cred</small>
+                <div class="col-lg-6">
+
+                    <span class="section-badge">
+                        🏢 Sobre a Simpol Cred
+                    </span>
+
+                    <h2>
+                        Há 20 anos ajudando pessoas a conquistarem seus objetivos
+                    </h2>
+
+                    <p>
+                        Há 20 anos no mercado, a Simpol Cred é referência em soluções
+                        financeiras no Tocantins, oferecendo confiança, segurança e
+                        condições diferenciadas para quem busca crédito, financiamentos,
+                        seguros e outras soluções financeiras.
+                    </p>
+
+                    <p>
+                        Nossa história foi construída através de relacionamentos sólidos,
+                        atendimento de qualidade e compromisso em encontrar as melhores
+                        oportunidades para cada cliente.
+                    </p>
+
+                    <div class="sobre-destaques">
+
+                        <div class="destaque-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>
+                                Presente em diversas cidades do Tocantins
+                            </span>
+                        </div>
+
+                        <div class="destaque-item">
+                            <i class="fas fa-users"></i>
+                            <span>
+                                Atendimento humanizado e personalizado
+                            </span>
+                        </div>
+
+                        <div class="destaque-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>
+                                Processos ágeis e seguros
+                            </span>
+                        </div>
+
+                        <div class="destaque-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>
+                                Uma das redes de escritórios que mais cresce no estado
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="sobre-card">
+
+                        <div class="numero-destaque">
+                            20+
+                        </div>
+
+                        <h3>
+                            Anos de Experiência
+                        </h3>
+
+                        <p>
+                            Duas décadas construindo credibilidade, oferecendo
+                            soluções financeiras e ajudando clientes a realizarem
+                            projetos, resolverem imprevistos e alcançarem seus objetivos.
+                        </p>
+
+                        <div class="sobre-beneficios">
+
+                            <div>
+                                ✓ Atendimento Humanizado
+                            </div>
+
+                            <div>
+                                ✓ Processos Ágeis e Seguros
+                            </div>
+
+                            <div>
+                                ✓ Condições Competitivas
+                            </div>
+
+                            <div>
+                                ✓ Credibilidade e Experiência
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div>
-                <a href="#" class="text-light me-3"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                <a href="#" class="text-light me-3"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                <a href="#" class="text-light me-3"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-            </div>
+
         </div>
-    </footer>
 
+    </section>
+    <footer class="footer-section">
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <!-- Empresa -->
+                <div class="col-lg-4">
+
+                    <img src="assets/img/logo_transparente_branco.png" alt="Simpol Cred" class="footer-logo">
+
+                    <p class="footer-text">
+
+                        Há mais de 20 anos ajudando milhares de clientes
+                        a conquistarem seus objetivos através de soluções
+                        financeiras seguras e acessíveis.
+
+                    </p>
+
+                </div>
+
+                <!-- Navegação -->
+                <div class="col-lg-3">
+
+                    <h5>Links Rápidos</h5>
+
+                    <ul class="footer-links">
+
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#simulador-cartao">Simulador</a></li>
+                        <li><a href="#contato">Contato</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contato -->
+                <div class="col-lg-5">
+
+                    <h5>Contato</h5>
+
+                    <div class="footer-contact">
+
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            (63) 99209-3340
+                        </p>
+
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            contato@simpolcred.com.br
+                        </p>
+
+                        <p>
+                            <i class="fas fa-location-dot"></i>
+                            Palmas - Tocantins
+                        </p>
+
+                    </div>
+
+                    <div class="footer-social">
+
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Simpol Cred. Todos os direitos reservados.
+                </span>
+
+                <span>
+                    Desenvolvido por Gustavo Lima
+                </span>
+
+            </div>
+            <div class="footer-legal">
+
+                <a href="privacidade.html">
+                    <i class="fas fa-shield-alt"></i>
+                    Privacidade
+                </a>
+
+                <a href="cookies.html">
+                    <i class="fas fa-cookie-bite"></i>
+                    Cookies
+                </a>
+
+                <a href="termos.html">
+                    <i class="fas fa-file-contract"></i>
+                    Termos de Uso
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <a href="https://wa.me/5563992093340?text=Olá!%20Gostaria%20de%20fazer%20uma%20simulação." class="whatsapp-float"
+        target="_blank" aria-label="WhatsApp">
+
+        <i class="fab fa-whatsapp"></i>
+
+        <span class="whatsapp-tooltip">
+            Fale Conosco
+        </span>
+
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
