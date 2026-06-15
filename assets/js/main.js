@@ -1,7 +1,12 @@
-// Formulário de contato 
-document
-    .getElementById('leadForm')
-    .addEventListener('submit', function (e) {
+/* ========================================
+   FORMULÁRIO DE CONTATO
+======================================== */
+
+const leadForm = document.getElementById('leadForm');
+
+if (leadForm) {
+
+    leadForm.addEventListener('submit', function (e) {
 
         e.preventDefault();
 
@@ -14,96 +19,142 @@ document
         const cidade =
             document.getElementById('cidade').value;
 
-        let whatsapp = '';
+        const servico =
+            document.getElementById('servico').value;
 
-        const atendentes = {
+        const mensagem = `
+*Novo Lead - Site Simpol Cred*
 
-            palmas: [
-                '5563991111111',
-                '5563992222222'
-            ],
+👤 Nome: ${nome}
 
-            araguaina: [
-                '5563993333333',
-                '5563994444444'
-            ],
+📱 Telefone: ${telefone}
 
-            gurupi: [
-                '5563995555555',
-                '5563996666666'
-            ]
-        };
+📍 Cidade: ${cidade}
 
-        const lista = atendentes[cidade];
-
-        // distribuição simples
-        const indice =
-            Math.floor(Math.random() * lista.length);
-
-        whatsapp = lista[indice];
-
-        const mensagem =
-            `Olá! Meu nome é ${nome}.
-
-Cidade: ${cidade}
-
-Telefone: ${telefone}
-
-Gostaria de fazer uma simulação de crédito.`;
+📋 Serviço: ${servico}
+`;
 
         const url =
-            `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensagem)}`;
+            `https://wa.me/5563992093340?text=${encodeURIComponent(mensagem)}`;
 
         window.open(url, '_blank');
 
     });
+
+}
+
+/* ========================================
+   NAVBAR SCROLL
+======================================== */
 
 window.addEventListener('scroll', () => {
 
     const navbar =
         document.querySelector('.custom-navbar');
 
+    if (!navbar) return;
+
     if (window.scrollY > 50) {
+
         navbar.classList.add('scrolled');
+
     } else {
+
         navbar.classList.remove('scrolled');
+
     }
 
 });
 
-const servico = document.getElementById('servico');
+/* ========================================
+   ALTERAÇÃO ÍCONE SERVIÇO
+======================================== */
 
-servico.addEventListener('change', function () {
+const servico =
+    document.getElementById('servico');
 
-    const icone = this.parentElement.querySelector('i');
+if (servico) {
 
-    switch (this.value) {
+    servico.addEventListener('change', function () {
 
-        case 'cartao':
-            icone.className = 'fas fa-credit-card';
-            break;
+        const icone =
+            this.parentElement.querySelector('i');
 
-        case 'fgts':
-            icone.className = 'fas fa-piggy-bank';
-            break;
+        if (!icone) return;
 
-        case 'consignado':
-            icone.className = 'fas fa-hand-holding-usd';
-            break;
+        switch (this.value) {
 
-        case 'financiamento':
-            icone.className = 'fas fa-car';
-            break;
+            case 'cartao':
+                icone.className =
+                    'fas fa-credit-card';
+                break;
 
-        case 'seguro':
-            icone.className = 'fas fa-shield-alt';
-            break;
+            case 'fgts':
+                icone.className =
+                    'fas fa-piggy-bank';
+                break;
 
-        default:
-            icone.className = 'fas fa-briefcase';
-    }
+            case 'consignado':
+                icone.className =
+                    'fas fa-hand-holding-usd';
+                break;
 
-});
+            case 'financiamento':
+                icone.className =
+                    'fas fa-car';
+                break;
+
+            case 'seguro':
+                icone.className =
+                    'fas fa-shield-alt';
+                break;
+            case 'solar':
+                icone.className = 'fas fa-solar-panel';
+                break;
+
+            case 'juridico':
+                icone.className = 'fas fa-scale-balanced';
+                break;
+
+            case 'municipal':
+                icone.className = 'fas fa-building-columns';
+                break;
+
+            case 'estadual':
+                icone.className = 'fas fa-landmark';
+                break;
+
+            case 'federal':
+                icone.className = 'fas fa-landmark-dome';
+                break;
+
+            case 'inss':
+                icone.className = 'fas fa-user-shield';
+                break;
+
+            case 'igeprev':
+                icone.className = 'fas fa-file-shield';
+                break;
+            case 'clt':
+                icone.className = 'fas fa-id-card';
+                break;
+            case 'consorcio':
+                icone.className = 'fas fa-handshake';
+                break;
+
+            default:
+                icone.className =
+                    'fas fa-briefcase';
+
+        }
+
+    });
+
+}
+
+/* ========================================
+   ALTERNAR MODO DO SIMULADOR
+======================================== */
 
 let modoAtual = 'receber';
 
@@ -129,6 +180,8 @@ botoesModo.forEach(btn => {
         const input =
             document.getElementById('valorPrincipal');
 
+        if (!label || !input) return;
+
         if (modoAtual === 'receber') {
 
             label.innerHTML =
@@ -143,7 +196,7 @@ botoesModo.forEach(btn => {
                 'Qual seu limite disponível?';
 
             input.placeholder =
-                'Ex: R$2500';
+                'Ex: 2500';
 
         }
 
@@ -151,7 +204,12 @@ botoesModo.forEach(btn => {
 
 });
 
+/* ========================================
+   TABELA DE TAXAS
+======================================== */
+
 const taxas = {
+
     palmas: {
         3: 8,
         6: 10,
@@ -181,25 +239,61 @@ const taxas = {
         18: 18,
         21: 20
     }
+
 };
 
-document
-    .getElementById('btnCalcular')
-    .addEventListener('click', function () {
+/* ========================================
+   SIMULADOR
+======================================== */
+
+const btnCalcular =
+    document.getElementById('btnCalcular');
+
+if (btnCalcular) {
+
+    btnCalcular.addEventListener('click', function () {
+
+        const nome =
+            document.getElementById('simNome').value;
+
+        const cpf =
+            document.getElementById('simCpf').value;
+
+        const telefone =
+            document.getElementById('simTelefone').value;
 
         const cidade =
-            document.getElementById('cidade').value;
+            document.getElementById('simCidade').value;
 
         const parcelas =
-            document.getElementById('parcelas').value;
+            document.getElementById('simParcelas').value;
 
         const valor =
             parseFloat(
                 document.getElementById('valorPrincipal').value
             );
 
-        if (!cidade || !parcelas || !valor) {
+        if (
+            !nome ||
+            !cpf ||
+            !telefone ||
+            !cidade ||
+            !parcelas ||
+            !valor
+        ) {
+
             alert('Preencha todos os campos.');
+
+            return;
+        }
+
+        if (
+            !taxas[cidade] ||
+            !taxas[cidade][parcelas]
+        ) {
+
+            alert('Taxa não encontrada.');
+
             return;
         }
 
@@ -214,17 +308,6 @@ document
                 valor * (1 + taxa / 100);
 
             document.querySelector(
-                '.valor-resultado'
-            ).innerHTML =
-                resultado.toLocaleString(
-                    'pt-BR',
-                    {
-                        style: 'currency',
-                        currency: 'BRL'
-                    }
-                );
-
-            document.querySelector(
                 '.resultado-simulacao p'
             ).innerHTML =
                 'Este é o limite aproximado que você precisa ter disponível no cartão.';
@@ -235,44 +318,107 @@ document
                 valor / (1 + taxa / 100);
 
             document.querySelector(
-                '.valor-resultado'
+                '.resultado-simulacao p'
             ).innerHTML =
-                resultado.toLocaleString(
+                'Este é o valor aproximado que você pode receber.';
+
+        }
+
+        document.querySelector(
+            '.valor-resultado'
+        ).innerHTML =
+            resultado.toLocaleString(
+                'pt-BR',
+                {
+                    style: 'currency',
+                    currency: 'BRL'
+                }
+            );
+
+        document.getElementById(
+            'resultadoSimulacao'
+        ).style.display = 'block';
+
+        const mensagem =
+            `*Nova Simulação Simpol Cred*
+
+👤 Nome: ${nome}
+📄 CPF: ${cpf}
+📱 Telefone: ${telefone}
+📍 Cidade: ${cidade}
+💳 Parcelas: ${parcelas}x
+
+${modoAtual === 'receber'
+                ? `💰 Valor Desejado: ${valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
+                : `💳 Limite Disponível: ${valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`}
+
+✅ Resultado: ${resultado.toLocaleString(
                     'pt-BR',
                     {
                         style: 'currency',
                         currency: 'BRL'
                     }
-                );
+                )}
+`;
 
-            document.querySelector(
-                '.resultado-simulacao p'
-            ).innerHTML =
-                'Este é o valor aproximado que você pode receber.';
+        const url =
+            `https://wa.me/5563992093340?text=${encodeURIComponent(mensagem)}`;
+
+        const btnWhatsapp =
+            document.getElementById(
+                'btnWhatsappResultado'
+            );
+
+        if (btnWhatsapp) {
+
+            btnWhatsapp.href = url;
+
         }
-        document.getElementById(
-            'resultadoSimulacao'
-        ).style.display = 'block';
+
     });
-    
-const whatsappBtn =
-    document.querySelector('.whatsapp-float');
 
-const mensagem =
-    `Olá! Acabei de fazer uma simulação no site.
+}
 
-Cidade: ${cidade}
-Parcelas: ${parcelas}x
+const btnMostrar =
+    document.getElementById(
+        'btnMostrarServicos'
+    );
 
-Resultado: ${resultado.toLocaleString(
-        'pt-BR',
-        {
-            style: 'currency',
-            currency: 'BRL'
+const servicosExtras =
+    document.getElementById(
+        'servicosExtras'
+    );
+
+if (btnMostrar && servicosExtras) {
+
+    btnMostrar.addEventListener(
+        'click',
+        () => {
+
+            servicosExtras.classList.toggle(
+                'show'
+            );
+
+            btnMostrar.classList.toggle(
+                'active'
+            );
+
+            if (
+                servicosExtras.classList.contains(
+                    'show'
+                )
+            ) {
+
+                btnMostrar.innerHTML =
+                    'Mostrar menos <i class="fas fa-chevron-up"></i>';
+
+            } else {
+
+                btnMostrar.innerHTML =
+                    'Ver todos os serviços <i class="fas fa-chevron-down"></i>';
+            }
+
         }
-    )}
+    );
 
-Gostaria de falar com um especialista.`;
-
-whatsappBtn.href =
-    `https://wa.me/5563992093340?text=${encodeURIComponent(mensagem)}`;
+}

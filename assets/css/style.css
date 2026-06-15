@@ -2104,3 +2104,46 @@ html {
 
     font-size:.9rem;
 }
+.servicos-extras {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height .8s ease,
+        opacity .5s ease;
+}
+
+.servicos-extras.show {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.btn-servicos {
+    border: none;
+    background: #061B6B;
+
+    color: #fff;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-servicos:hover {
+    transform: translateY(-3px);
+}
+
+.btn-servicos i {
+    margin-left: 8px;
+    transition: .4s;
+}
+
+.btn-servicos.active i {
+    transform: rotate(180deg);
+}
